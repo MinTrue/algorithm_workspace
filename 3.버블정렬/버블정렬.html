@@ -1,7 +1,5 @@
 <script>
-    let arr = [8 ,2 ,7 ,3];
-
-    console.log("정렬 전" , arr);
+    
 
     //1회 수행
     /*
@@ -41,8 +39,8 @@
     console.log(a,"회전 결과" , arr);
 }
 */
-
-
+    let arr = [8 ,2 ,7 ,3];
+    console.log("정렬 전" , arr);
     function bubbleSort(n){ //이 함수가 바깥쪽 반복문 역할을 한다.
         if(n>=arr.length)return; //바깥쪽 포문을 대신하므로, 배열에 도착하면 멈추자
         for(let i=0;i<arr.length-n;i++){
@@ -56,7 +54,6 @@
         console.log(n,"회전 결과" , arr);
         bubbleSort(n+1);
     }
-
     bubbleSort(0);
 
 </script>

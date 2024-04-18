@@ -1,0 +1,32 @@
+<script>
+     //스왑하기
+    let arr = [7, 5];
+    let temp =arr[0]
+    arr[0] = arr[i]
+    arr[i] = temp;
+
+    //구구단 재귀호출 2단
+    function dan(n){
+        console.log("2*"+n+"="+(2*n))
+        dan(n+1)
+    }   
+    dan(1)
+    //이중포문 대신 재귀호출
+    let arr2 = [
+        [1,2,3,4,5,6],
+        [1,2,3,4,5,6],
+        [1,2,3,4,5,6]
+    ]
+    function test(n){
+        if(n>=arr2.length)return;
+        for(let i=0;i<arr[n].length;i++){
+            document.write(arr[n][i]);
+        }
+        document.write("<br>")
+        test(n+1)
+    }
+    test(0)
+
+
+
+</script>

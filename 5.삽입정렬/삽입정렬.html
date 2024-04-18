@@ -1,0 +1,29 @@
+<script src="../js/lib.js"></script>
+<script>
+    //삽입정렬은 카드를 배치하는 원리를 이용한 정렬 알고리즘
+    //가장 바깥쪽 for문(카드선택하는용도 )  안쪽 for문 (이전카드 비교용도)
+    // let arr = [5, 7, 13 ,9 ,2];
+    let arr = createArray(1, 17, 9);
+    console.log("정렬전" , arr);
+
+    //카드를 선택하기 위한 반복문
+    for(let i=1; i<arr.length;i++){
+        //선택된 카드를 변수에 담아놓자
+        let temp = arr[i]; //현재 temp는 7
+        //뽑은 카드와 뽑은 카드의 자리부터 시작하여, 이전 카드들을 대상으로 비교하면서
+        //만일 이전 카드값이 더 큰 경우 우측으로 한칸 이동 
+        let j;
+        for(j=i; j>0;j--){ //
+            if(arr[j-1]>temp){ //arr[j]가 temp보다 크면 우측으로 이동
+                arr[j] = arr[j-1];
+            } else{ //뽑은 카드와 이전 카드 값을 비교했을때 이전 카드가 더 작은 값 이라면
+                 //더 이상 안쪽 반복문을 진행하면 안된다 why?? temp값이 엉뚱하게 언제나 0번째
+                 //값을 차지하게 된다. 왜?? temp 값을 대입하는 코드는 for문 바깥쪽에 있기 떄문에
+                break;
+            }
+        }
+        arr[j]=temp//빈 자리를 temp 의 값이 차지한다.
+    }
+    console.log("정렬후", arr);
+
+</script>

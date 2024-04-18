@@ -1,0 +1,33 @@
+<script src="../js/lib.js"></script>
+<script>
+
+    //합병 정렬
+    let arr = [1, 4 , 9];
+    let arr2 = [2, 5, 8];
+
+    let len = arr.length+arr2.length;
+    let mergeArray = new Array(len);
+
+    let idx1 = 0;
+    let idx2 = 0;
+    let idxM = 0;
+    
+
+    while(idx1 <arr.length && idx2 <arr2.length){
+        if(arr[idx1]< arr2[idx2]){
+            mergeArray[idxM]=arr[idx1];
+            idx1++;
+            idxM++;
+        } else{
+            mergeArray[idxM]=arr2[idx2];
+            idx2++;
+            idxM++;
+        }
+    }
+    console.log("중간 합병 결과" , mergeArray);
+
+    while(idx1<arr.length)mergeArray[idxM++]=arr[idx1++];
+    while(idx2<arr.length)mergeArray[idxM++]=arr2[idx2++];
+
+    console.log("마지막 합병 결과" , mergeArray);
+</script>

@@ -1,0 +1,30 @@
+<script src="../js/lib.js"></script>
+<script>
+    let arr = createArray(1, 15 , 10);
+
+    console.log("정렬전" ,arr);
+
+    //버킷을 준비 버킷의 범위는 1~ 15사이를 감당해야 하므로, 0번째를 사용하지 않는다
+    //16개짜리 준비하자
+    let bucket = [];
+    for(let i=0;i<16;i++){
+        bucket.push(i);
+    }
+    console.log(bucket);
+
+    //버킷에 카운트를 세서 채운다
+
+    for(let i=0;i<arr.length;i++){
+        bucket[arr[i]]++; //arr[i] 번째의 값이 버킷이 증가될 index결정
+    }
+    console.log("버킷의 카운트 결과", bucket);
+    let index =1;
+    for(let i =1; i<bucket.length;i++){
+        for(let j=1; j<=bucket[i];j++){
+            arr[index++]=i
+        }
+    }
+    console.log("정렬후" ,arr);
+</script>
+
+

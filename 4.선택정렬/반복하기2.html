@@ -1,0 +1,20 @@
+<script src="../js/lib.js"></script>
+<script>
+
+    //선택정렬
+    let arr = createArray(1, 12 ,8);
+    console.log("정렬전", arr);
+    function selectionSort(n){
+        if(n>=arr.length)return;
+        for(let i=n; i<arr.length;i++){
+            if(arr[i]<arr[n]){
+                let temp = arr[n]
+                arr[n] = arr[i]
+                arr[i] = temp
+            }
+        }
+        selectionSort(n+1)
+    }
+    selectionSort(0)
+    console.log("정렬후", arr);
+</script>

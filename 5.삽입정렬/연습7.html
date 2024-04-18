@@ -1,0 +1,22 @@
+
+
+<script src="../js/lib.js"></script>
+<script>
+
+    //삽입 카드 정렬
+    let arr = createArray(1, 17 ,10);
+    console.log("정렬 전", arr)
+    for(let i=1;i<arr.length;i++){
+        let temp = arr[i]
+        let j;
+        for( j=i;j>0;j--){
+            if(arr[j-1]>temp){
+                arr[j] = arr[j-1]
+            } else{
+                break;
+            }
+        }
+        arr[j] = temp
+    }
+    console.log("정렬 후", arr)
+</script>

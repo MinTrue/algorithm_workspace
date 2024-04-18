@@ -1,0 +1,30 @@
+<script>
+
+
+    function createArray(min, max, length){
+        let arr = [];
+        while(true){
+            if(arr.length>=length)break;
+            let n = getRandomByRange(min,max)
+            if(arr.indexOf(n)==-1)arr.push(n)
+        }
+    return arr;
+    }
+    let arr = createArray(1 , 12 , 10);
+    
+    function getIndexOfTarget(target){
+        let index = -1
+        for(let i =0 ;i<arr.length-n;i++){
+            if(arr[i]==target){
+                index = i;
+            }
+        }
+        return index;
+    }
+    let result = getIndexOfTarget(7);
+    if(result ==-1){
+        console.log(7, "이 배열에 존재하지 않습니다.")
+    } else{
+        console.log(7, "이 배열에", result, "째 에 존재합니다.")
+    }
+</script>
